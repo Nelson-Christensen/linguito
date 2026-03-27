@@ -105,7 +105,7 @@
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint:commit": "commitlint --edit",
     "lint:fix": "eslint \"**/*.{js,ts}\" --fix",
-    "prepare": "test -d .git && lefthook install || true",
+    "prepare": "test -d .git && lefthook install || true; shx rm -rf dist && tsc -b && tsc-alias",
     "postpack": "shx rm -f oclif.manifest.json",
     "prepack": "oclif manifest",
     "release": "release-it",
